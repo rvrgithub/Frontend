@@ -31,6 +31,8 @@ export const Register = () => {
     setValues({ ...values, [event.target.name]: event.target.value });
   };
 
+  console.log("values",values)
+
   // toastify function...
   const handleValidation = () => {
     const { password, confirmPassword, username, email } = values;

@@ -18,6 +18,13 @@ export const SetProfile = () => {
     draggable: true,
     theme: "dark",
   };
+
+  useEffect(() => {
+    if (!localStorage.getItem("chat-app-user")) {
+      navigate("/login");
+    }
+  }, []);
+
   const setProfilePicture = async () => {
     if (selectedProfile === undefined) {
       toast.error("Please select an Profile", toastOptions);
@@ -56,7 +63,7 @@ export const SetProfile = () => {
     // console.log("profiles_11",profiles);
   }, []);
 
-  console.log("profiles", profiles);
+  // console.log("profiles", profiles);
 
   return (
     <>
