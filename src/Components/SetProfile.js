@@ -30,11 +30,11 @@ export const SetProfile = () => {
       toast.error("Please select an Profile", toastOptions);
     } else {
       const user = await JSON.parse(localStorage.getItem("chat-app-user"));
-      console.log("user", user);
+      // console.log("user", user);
       const { data } = await axios.post(`${setProfileRoute}/${user._id}`, {
         image: profiles[selectedProfile],
       });
-      console.log("imageData", data);
+      // console.log("imageData", data);
       if (data.isSet) {
         user.isProfileImageSet = true;
         user.profileImage = data.image;
@@ -88,7 +88,7 @@ export const SetProfile = () => {
                   >
                     <img
                       src={`${elem}`}
-                      alt="Profile"
+                      alt="Profile_error"
                       key={index}
                       onClick={() => setSelectedProfile(index)}
                     />

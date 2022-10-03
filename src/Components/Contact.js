@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "../assets/logo.svg";
 
 export const Contacts = ({ contacts, changeChat }) => {
-  console.log("contactssPages Data", contacts);
+  // console.log("contactssPages Data", contacts);
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
@@ -105,8 +105,8 @@ const Container = styled.div`
       .profile {
         img {
           border-radius: 50%;
-          height: 3rem;
-          width: 4rem;
+          height: 3.5rem;
+          width: 3.5rem;
         }
       }
       .username {
@@ -127,7 +127,7 @@ const Container = styled.div`
     gap: 2rem;
     .profile {
       img {
-        height: 4rem;
+        height: 4.5rem;
         width: 4.5rem;
         max-inline-size: 100%;
         border-radius: 50%;

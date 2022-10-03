@@ -8,7 +8,7 @@ export const Welcome = () => {
   }, []);
   return (
     <Container>
-      <img src={Robot} alt="" />
+      <img src={Robot} alt="robot_error" />
       <h1>
         Welcome, <span>{userName}!</span>
       </h1>
